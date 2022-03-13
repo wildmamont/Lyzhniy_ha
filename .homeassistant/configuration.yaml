@@ -1,0 +1,164 @@
+## Для UTF-8 Добавил немного текста
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include sensor.yaml
+utility_meter: !include utility_meter.yaml
+
+
+homeassistant:
+  customize: !include customize.yaml
+  allowlist_external_dirs:
+    - /config/sensors
+    - /config/hilink
+
+# Example configuration.yaml 
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_bot_api_key
+    allowed_chat_ids:
+      - !secret telegram_bot_allowed_chat_id1
+      - !secret telegram_bot_allowed_chat_id2
+      - !secret telegram_bot_allowed_chat_id3
+      - !secret telegram_bot_allowed_chat_id4
+      - !secret telegram_bot_allowed_chat_id5
+
+#sonoff:
+#  devices:
+#    1000ca69dd:
+#      device_class:
+#      - device_class: switch
+
+
+#switch:
+#  - platform: sonoff_lan_mode_r3
+#    name: Kitchen
+#    device_id: 1000b6e374
+#    api_key: 12345678-90AB-CDEF-1234-567890ABCDEF # not needed for devices in DIY mode
+#    icon: mdi:lightbulb
+#    outlet: 0
+
+#      devicekey: bc58097c-af80-4b2c-90cf-d390b7a6f6d4
+
+#  reload: always  # обновлять список устройств при каждом запуске HA
+
+#camera:
+#  - platform: generic
+#    name: Fomino Image
+#    still_image_url: http://1192.168.20.44/photo.jpg
+#    verify_ssl: false
+camera:
+#  - platform: mjpeg
+#    name: Warrior
+#    mjpeg_url: http://192.168.17.93:8123/local/xm_image.jpg
+  - platform: mjpeg
+    name: HikVision Camera
+    mjpeg_url: http://192.168.17.125/Streaming/channels/1/picture
+    username: admin
+    password: a6xzoq_Z
+    verify_ssl: false
+  - platform: mjpeg
+    name: Fomino Image
+    mjpeg_url: http://192.168.20.44/photo.jpg
+  - platform: mjpeg
+    name: Boavision_camera
+    mjpeg_url: http://192.168.20.44/boa.jpg
+
+
+
+mqtt:
+  broker: 192.168.29.42
+  port: 1883
+  keepalive: 60
+  client_id: home-assistant
+  username: Hass
+  password: Hass
+  discovery: true
+  discovery_prefix: homeassistant
+
+
+switch:
+  - platform: mqtt      ## TH16_2
+    name: "SonOff_Th2_Mqtt"      
+    state_topic: "stat/tasmota_4FA414/POWER"      
+    command_topic: "cmnd/tasmota_4FA414/POWER"
+    availability_topic: "tele/tasmota_4FA414/LWT"      
+    qos: 1      
+    payload_on: "ON"      
+    payload_off: "OFF"      
+    payload_available: "Online"      
+    payload_not_available: "Offline"      
+    state_on: "ON"      
+    state_off: "OFF"      
+    retain: true
+  - platform: mqtt      ## TH16_1
+    name: "SonOff_Th1_Mqtt"      
+    state_topic: "ESP_Easy/Relay/State1"
+    command_topic: "ESP_Easy/cmd"
+    availability_topic: "ESP_Easy/lwt"
+    qos: 1      
+    payload_on: "GPIO,12,1"
+    payload_off: "GPIO,12,0"
+    payload_available: "alive"
+    payload_not_available: "died"
+    state_on: 1
+    state_off: 0
+    retain: true
+
+
+
+#binary_sensor:
+#  - platform: hikvision
+#    host: 192.168.171.125
+#    username: admin
+#    password: a6xzoq_Z
+#ESP_Easy/DHT-14/Temperature
+
+logger:
+  default: info
+  logs:
+    custom_components.sonoff: info
+    homeassistant.components.mqtt: info
+    homeassistant.components.file: debug
+
+# Remove 10.03.2021
+#asuswrt:
+#  host: 192.168.29.1
+#  username: Admin
+#  password: !secret asus_router_password
+
+climate:
+  - platform: generic_thermostat
+    name: Cellar
+    heater:  switch.tasmota
+    target_sensor: sensor.tasmota_si7021_temperature
+    max_temp: 25
+    min_temp: 0
+
+
+lovelace:
+  mode: storage
+  resources:
+  - url: /module/fold-entity-row.js
+    type: module
+
+panel_iframe:
+  grafana:
+    title: "Grafana"
+    url: "http://192.168.29.42:3000/goto/eQU-rpRgz?orgId=1"
+
+shell_command:
+  get_temperature_vichnya: /config/scripts/vishnya.sh
+  get_temperature_fomino: /config/scripts/fomino.sh

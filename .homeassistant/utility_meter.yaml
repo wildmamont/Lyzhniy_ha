@@ -1,0 +1,13 @@
+  cellar_daily:
+    source:  sensor.cellar_wattage
+    cycle: daily
+    tariffs:
+      - peak
+      - offpeak
+
+  cellar_monthly:
+    source:  sensor.cellar_wattage
+    cycle: monthly
+    tariffs:
+      - peak
+      - offpeak

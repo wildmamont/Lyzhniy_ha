@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+	<Count>5</Count>
+	<Messages>
+		<Message>
+			<Smstat>0</Smstat>
+			<Index>40106</Index>
+			<Phone>Beeline</Phone>
+			<Content>Напоминаем, что 28.12 спишется ежемесячная абон.плата по вашему тарифу. Рекомендуем пополнить баланс на 314.3 руб.  чтобы хватило на списание и на другие возможные расходы. Быстро пополнить баланс можно на www.oplata.beeline.ru &#40;интернет по ссылке бесплатный&#41;. Команда Билайн</Content>
+			<Date>2020-12-28 09:07:45</Date>
+			<Sca></Sca>
+			<SaveType>4</SaveType>
+			<Priority>0</Priority>
+			<SmsType>2</SmsType>
+		</Message>
+	</Messages>
+</response>

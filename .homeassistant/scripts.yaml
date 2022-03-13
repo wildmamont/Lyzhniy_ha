@@ -1,0 +1,6 @@
+'1647174695983':
+  alias: New Script
+  sequence:
+  - service: shell_command.get_temperature
+    data: {}
+  mode: single

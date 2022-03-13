@@ -1,0 +1,7 @@
+sensor.28_3c01b5562324_temperature:
+  device_file: /sys/bus/w1/devices/28-3c01b5562324/w1_slave
+  friendly_name: 28-3c01b5562324 Temperature
+  id: 283c01b5562324
+  entity_id: 283c01b5562324
+person.iakov:
+  Telegram: '51527842'

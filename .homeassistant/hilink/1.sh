@@ -1,0 +1,3 @@
+#cat month_statistics.xml|tr -d '\r\n'|sed -E 's/.*CurrentMonthDownload>([^<]+)<.*CurrentMonthUpload>([^<]+).*MonthDuration>([^<]+).*MonthLastClearTime>([^<]+)<.*/{"response": {"CurrentMonthDownload": "\1", "CurrentMonthUpload": "\2", "MonthDuration": "\3", "MonthLastClearTime": "\4"}}/'
+#cat sms-count.xml |tr -d '\r\n'| sed -E 's/.+LocalUnread>([[:digit:]]+)<.*/{"response": {"LocalUnread": "\1"}}/'
+cat sms_list1.xml| tr -d '\r\n'|sed -E 's/.*<Count>([[:digit:]]+).*<Smstat>([[:digit:]]+).*<Index>([[:digit:]]+).*<Phone>([^<]+).*Content>(.*)<\/Cont.*<Date>([^<]+).*/{"repsonse": {"Count": "\1","Messages": {"Message": {"Smstat": "\2", "Index": "\3", "Phone": "\4", "Content": "\5", "Date": "\6"}}}}/'

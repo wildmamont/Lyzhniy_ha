@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+	<Count>5</Count>
+	<Messages>
+		<Message>
+			<Smstat>0</Smstat>
+			<Index>40106</Index>
+			<Phone>Beeline</Phone>
+			<Content>Напоминаем, что 28.12 спишется ежемесячная абон.плата по вашему тарифу. Рекомендуем пополнить баланс на 314.3 руб.  чтобы хватило на списание и на другие возможные расходы. Быстро пополнить баланс можно на www.oplata.beeline.ru &#40;интернет по ссылке бесплатный&#41;. Команда Билайн</Content>
+			<Date>2020-12-28 09:07:45</Date>
+			<Sca></Sca>
+			<SaveType>4</SaveType>
+			<Priority>0</Priority>
+			<SmsType>2</SmsType>
+		</Message>
+		<Message>
+			<Smstat>0</Smstat>
+			<Index>40103</Index>
+			<Phone>BeelineTV</Phone>
+			<Content>Во имя сериальчиков, фильмов и мандаринок! Дарим доступ к лучшим подпискам Билайн ТВ на 30 дней: Фильмы ivi, more.tv, ViP Play, KIDS, AMEDIATEKA и многое другое. Ищите снежинку рядом с подпиской и смотрите, что хотите, бесплатно http:&#x2F;&#x2F;cm.beeline.ru&#x2F;i&#x2F;L8RJZbVGlugR9dIr Только с 21.12.20г. по 10.01.21г.! Команда Билайн</Content>
+			<Date>2020-12-27 09:57:07</Date>
+			<Sca></Sca>
+			<SaveType>1</SaveType>
+			<Priority>0</Priority>
+			<SmsType>2</SmsType>
+		</Message>
+		<Message>
+			<Smstat>0</Smstat>
+			<Index>40108</Index>
+			<Phone>Beeline</Phone>
+			<Content>Напоминаем, что 28.12 спишется ежемесячная абон.плата по вашему тарифу. Рекомендуем пополнить баланс на 314.3 руб.  чтобы хватило на списание и на другие возможные расходы. Быстро пополнить баланс можно на www.oplata.beeline.ru &#40;интернет по ссылке бесплатный&#41;. Команда Билайн</Content>
+			<Date>2020-12-26 09:26:34</Date>
+			<Sca></Sca>
+			<SaveType>4</SaveType>
+			<Priority>0</Priority>
+			<SmsType>2</SmsType>
+		</Message>
+		<Message>
+			<Smstat>0</Smstat>
+			<Index>40101</Index>
+			<Phone>SUNLIGHT</Phone>
+			<Content>Вам ПОДАРКИ к Дню Рождения! CКИДКА 50% на ВСЕ УКРАШЕНИЯ и бесплатная курьерская доставка по всей России! Успейте оформить заказ до 23.12 в приложении SUNLIGHT: lvsl.ru&#x2F;j</Content>
+			<Date>2020-12-11 15:58:20</Date>
+			<Sca></Sca>
+			<SaveType>1</SaveType>
+			<Priority>0</Priority>
+			<SmsType>2</SmsType>
+		</Message>
+		<Message>
+			<Smstat>0</Smstat>
+			<Index>40102</Index>
+			<Phone>Beeline</Phone>
+			<Content>Если вам срочно понадобились деньги, поможем найти решение на www.beeline.ru&#x2F;moneyonline Ваш Билайн</Content>
+			<Date>2020-11-29 15:03:49</Date>
+			<Sca></Sca>
+			<SaveType>1</SaveType>
+			<Priority>0</Priority>
+			<SmsType>2</SmsType>
+		</Message>
+	</Messages>
+</response>
