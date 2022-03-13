@@ -254,3 +254,16 @@
       temperature: '{{ states(''input_number.cellar_daytime_temperature'') }}'
     entity_id: climate.cellar
   mode: single
+- id: '1647176714498'
+  alias: update_temperature
+  description: Обновление датчиков температуры
+  trigger:
+  - platform: time_pattern
+    minutes: /15
+  condition: []
+  action:
+  - service: shell_command.get_temperature_vichnya
+    data: {}
+  - service: shell_command.get_temperature_fomino
+    data: {}
+  mode: single
