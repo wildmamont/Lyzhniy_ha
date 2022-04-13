@@ -7,8 +7,8 @@ default_config:
 #   base_url: example.duckdns.org:8123
 
 # Text to speech
-tts:
-  - platform: google_translate
+#tts:
+#  - platform: google_translate
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -16,6 +16,8 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include sensor.yaml
 utility_meter: !include utility_meter.yaml
+
+logger: !include logger.yaml
 
 
 homeassistant:
@@ -35,58 +37,52 @@ telegram_bot:
       - !secret telegram_bot_allowed_chat_id4
       - !secret telegram_bot_allowed_chat_id5
 
-#sonoff:
-#  devices:
-#    1000ca69dd:
-#      device_class:
-#      - device_class: switch
-
-
-#switch:
-#  - platform: sonoff_lan_mode_r3
-#    name: Kitchen
-#    device_id: 1000b6e374
-#    api_key: 12345678-90AB-CDEF-1234-567890ABCDEF # not needed for devices in DIY mode
-#    icon: mdi:lightbulb
-#    outlet: 0
-
-#      devicekey: bc58097c-af80-4b2c-90cf-d390b7a6f6d4
-
-#  reload: always  # обновлять список устройств при каждом запуске HA
+camera:
+  - platform: mjpeg
+    name: Boavision_snapshot
+    mjpeg_url: http://192.168.29.42:8123/local/bao_snapshot.jpg
+  - platform: mjpeg
+    name: VStarcam_snapshot
+    mjpeg_url: http://admin:888888@192.168.20.33:81/snapshot.cgi
 
 #camera:
 #  - platform: generic
 #    name: Fomino Image
 #    still_image_url: http://1192.168.20.44/photo.jpg
 #    verify_ssl: false
-camera:
+#camera:
 #  - platform: mjpeg
 #    name: Warrior
 #    mjpeg_url: http://192.168.17.93:8123/local/xm_image.jpg
-  - platform: mjpeg
-    name: HikVision Camera
-    mjpeg_url: http://192.168.17.125/Streaming/channels/1/picture
-    username: admin
-    password: a6xzoq_Z
-    verify_ssl: false
-  - platform: mjpeg
-    name: Fomino Image
-    mjpeg_url: http://192.168.20.44/photo.jpg
-  - platform: mjpeg
-    name: Boavision_camera
-    mjpeg_url: http://192.168.20.44/boa.jpg
+#  - platform: mjpeg
+#    name: HikVision Camera
+#    mjpeg_url: http://192.168.17.125/Streaming/channels/1/picture
+#    username: admin
+#    password: a6xzoq_Z
+#    verify_ssl: false
+#  - platform: mjpeg
+#    name: Fomino Image
+#    mjpeg_url: http://192.168.20.44/photo.jpg
+#  - platform: mjpeg
+#    name: Boavision_camera
+#    mjpeg_url: http://192.168.20.44/boa.jpg
+#  - platform: mjpeg
+#    name: Boavision_snapshot
+#    mjpeg_url: http://192.168.29.42:8123/local/bao_snapshot.jpg
+#  - platform: mjpeg
+#    name: VStarcam_snapshot
+#    mjpeg_url: http://admin:888888@192.168.20.33:81/snapshot.cgi
 
 
-
-mqtt:
-  broker: 192.168.29.42
-  port: 1883
-  keepalive: 60
-  client_id: home-assistant
-  username: Hass
-  password: Hass
-  discovery: true
-  discovery_prefix: homeassistant
+#mqtt:
+#  broker: 192.168.29.42
+#  port: 1883
+#  keepalive: 60
+#  client_id: home-assistant
+#  username: Hass
+#  password: Hass
+#  discovery: true
+#  discovery_prefix: homeassistant
 
 
 switch:
@@ -126,12 +122,6 @@ switch:
 #    password: a6xzoq_Z
 #ESP_Easy/DHT-14/Temperature
 
-logger:
-  default: info
-  logs:
-    custom_components.sonoff: info
-    homeassistant.components.mqtt: info
-    homeassistant.components.file: debug
 
 # Remove 10.03.2021
 #asuswrt:
@@ -162,3 +152,5 @@ panel_iframe:
 shell_command:
   get_temperature_vichnya: /config/scripts/vishnya.sh
   get_temperature_fomino: /config/scripts/fomino.sh
+  get_boa_snapshot: /config/scripts/get_boa_snapshot.sh
+#  get_boa_snapshot: curl 'http://admin:admin@192.168.20.110/jpgimage/1/image.jpg' -o /config/www/bao_snapshot.jpg 

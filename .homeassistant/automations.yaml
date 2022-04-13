@@ -128,11 +128,11 @@
   action:
   - service: telegram_bot.send_photo
     data:
-      url: http://192.168.20.44/photo.jpg
+      url: http://192.168.20.44:8123/local/vstarcam_snapshot.jpg
       target: '{{ trigger.event.data.chat_id }}'
   - service: telegram_bot.send_photo
     data:
-      url: http://192.168.20.44/boa.jpg
+      url: http://192.168.20.44:8123/local/boa_snapshot.jpg
       target: '{{ trigger.event.data.chat_id }}'
   - service: telegram_bot.send_message
     data:
@@ -266,4 +266,24 @@
     data: {}
   - service: shell_command.get_temperature_fomino
     data: {}
+  - service: shell_command.get_boa_snapshot
+    data: {}
+  mode: single
+- id: '1649839906249'
+  alias: Фотография в полдень
+  description: Отправляю фотографию в полдень
+  trigger:
+  - platform: time
+    at: '12:00:30'
+  condition: []
+  action:
+  - service: telegram_bot.send_photo
+    data:
+      url: http://192.168.20.44:8123/local/vstarcam_snapshot.jpg
+      target: -165156279
+  - service: telegram_bot.send_photo
+    data:
+      url: http://192.168.20.44:8123/local/boa_snapshot.jpg
+      caption: Фотография в полдень {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
+      target: -165156279
   mode: single

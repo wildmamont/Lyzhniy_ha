@@ -1,1 +1,9 @@
-[]
+- id: '1648032230465'
+  name: New Scene
+  entities:
+    camera.boavision_snapshot:
+      access_token: 3fd544db42140851aa3b9b94ecf9f15aefe19df6f1bbe822f487b56b8cde5fd1
+      entity_picture: /api/camera_proxy/camera.boavision_snapshot?token=3fd544db42140851aa3b9b94ecf9f15aefe19df6f1bbe822f487b56b8cde5fd1
+      friendly_name: Boavision_snapshot
+      supported_features: 0
+      state: idle

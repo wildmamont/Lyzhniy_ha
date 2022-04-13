@@ -1,0 +1,5 @@
+  default: info
+  logs:
+    custom_components.sonoff: info
+    homeassistant.components.mqtt: error
+    homeassistant.components.file: error
