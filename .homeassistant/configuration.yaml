@@ -86,19 +86,19 @@ camera:
 
 
 switch:
-  - platform: mqtt      ## TH16_2
-    name: "SonOff_Th2_Mqtt"      
-    state_topic: "stat/tasmota_4FA414/POWER"      
-    command_topic: "cmnd/tasmota_4FA414/POWER"
-    availability_topic: "tele/tasmota_4FA414/LWT"      
-    qos: 1      
-    payload_on: "ON"      
-    payload_off: "OFF"      
-    payload_available: "Online"      
-    payload_not_available: "Offline"      
-    state_on: "ON"      
-    state_off: "OFF"      
-    retain: true
+#  - platform: mqtt      ## TH16_2
+#    name: "SonOff_Th2_Mqtt"      
+#    state_topic: "stat/tasmota_4FA414/POWER"      
+#    command_topic: "cmnd/tasmota_4FA414/POWER"
+#    availability_topic: "tele/tasmota_4FA414/LWT"      
+#    qos: 1      
+#    payload_on: "ON"      
+#    payload_off: "OFF"      
+#    payload_available: "Online"      
+#    payload_not_available: "Offline"      
+#    state_on: "ON"      
+#    state_off: "OFF"      
+#    retain: true
   - platform: mqtt      ## TH16_1
     name: "SonOff_Th1_Mqtt"      
     state_topic: "ESP_Easy/Relay/State1"
