@@ -1,8 +1,8 @@
-  - platform: mqtt
-    name: "SonOff_Th2_Mqtt_Temperature"
-    state_topic: "tele/tasmota_4FA414/SENSOR"
-    unit_of_measurement: '°C'
-    value_template: "{{ value_json.SI7021.Temperature }}"
+#  - platform: mqtt
+#    name: "SonOff_Th2_Mqtt_Temperature"
+#    state_topic: "tele/tasmota_4FA414/SENSOR"
+#    unit_of_measurement: '°C'
+#    value_template: "{{ value_json.SI7021.Temperature }}"
 #  - platform: mqtt
 #    name: "SonOff_Th2_Mqtt_Humidity"
 #    state_topic: "tele/tasmota_4FA414/SENSOR"
