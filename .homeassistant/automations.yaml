@@ -161,10 +161,11 @@
       inline_keyboard:
       - Температура:/Vishnya_temperature, Фото:/Vishnya_photo
       - Назад:/start
-      message: 'Температура на втором этаже: {{ states(''sensor.28_3c01b5562324_temperature'')
-        }}, Температура на улице: {{ states(''sensor.28_3c01b556dd86_temperature'')
-        }}, Температура на под крышей: {{ states(''sensor.28_3c01b556abd9_temperature'')
-        }}.  Дата обновления: {{ as_timestamp(states.sensor[''28_3c01b5562324_temperature''].last_updated)|timestamp_local
+      message: 'Температура на первом этаже: {{ states(''sensor.28_3c01b55646ad_temperature'')
+        }}, втором этаже: {{ states(''sensor.28_3c01b5560bc5_temperature'') }}, Температура
+        на улице: {{ states(''sensor.28_3c01b556dd86_temperature'') }}, Температура
+        на под крышей: {{ states(''sensor.28_3c01b556abd9_temperature'') }}.  Дата
+        обновления: {{ as_timestamp(states.sensor[''28_3c01b5562324_temperature''].last_updated)|timestamp_local
         }}'
       title: ' Автоматика Вишневой '
   mode: queued
@@ -209,15 +210,27 @@
       disable_notification: true
       inline_keyboard:
       - Температура:/Vishnya_temperature, Фото:/Vishnya_photo
-      - 🠕 В меню:/start
+      - "\U0001F815 В меню:/start"
       message: ' Автоматика Вишневой'
   - service: telegram_bot.send_photo
     data:
-      password: a6xzoq_Z
+      password: homeassistant17
       target: '{{ trigger.event.data.chat_id }}'
       timeout: 250
-      url: http://192.168.17.125/Streaming/channels/1/picture
-      username: admin
+      url: http://192.168.17.92/onvif/snapshot/201
+      username: homeassistant
+  - service: telegram_bot.send_photo
+    data:
+      url: http://192.168.17.92/onvif/snapshot/101
+      username: homeassistant
+      password: homeassistant17
+      target: '{{ trigger.event.data.chat_id }}'
+  - service: telegram_bot.send_photo
+    data:
+      url: http://192.168.17.92/onvif/snapshot/301
+      username: homeassistant
+      password: homeassistant17
+      target: '{{ trigger.event.data.chat_id }}'
   mode: queued
   max: 10
 - id: '1610368227923'

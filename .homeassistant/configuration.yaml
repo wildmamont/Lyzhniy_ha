@@ -99,19 +99,19 @@ switch:
 #    state_on: "ON"      
 #    state_off: "OFF"      
 #    retain: true
-  - platform: mqtt      ## TH16_1
-    name: "SonOff_Th1_Mqtt"      
-    state_topic: "ESP_Easy/Relay/State1"
-    command_topic: "ESP_Easy/cmd"
-    availability_topic: "ESP_Easy/lwt"
-    qos: 1      
-    payload_on: "GPIO,12,1"
-    payload_off: "GPIO,12,0"
-    payload_available: "alive"
-    payload_not_available: "died"
-    state_on: 1
-    state_off: 0
-    retain: true
+#  - platform: mqtt      ## TH16_1
+#    name: "SonOff_Th1_Mqtt"      
+#    state_topic: "ESP_Easy/Relay/State1"
+#    command_topic: "ESP_Easy/cmd"
+#    availability_topic: "ESP_Easy/lwt"
+#    qos: 1      
+#    payload_on: "GPIO,12,1"
+#    payload_off: "GPIO,12,0"
+#    payload_available: "alive"
+#    payload_not_available: "died"
+#    state_on: 1
+#    state_off: 0
+#    retain: true
 
 
 
