@@ -105,6 +105,14 @@
     name: "sonoff_th2_mqtt_humidity"
     unit_of_measurement: "%"
     value_template: '{{ value_json.state }}'
+###
+## Fomino
+  - platform: file
+    file_path: "/config/sensors/28_0000055a67eb_temperature.json"
+    name: "28_0000055a67eb_temperature"
+    unit_of_measurement: "°C"
+    value_template: '{{ value_json.state }}'
+
 
 # hilink
   - platform: file
