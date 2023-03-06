@@ -23,3 +23,6 @@ set_vishnya_llt.sh
 sensors
 
 mosquitto.log
+
+home-assistant.key
+home-assistant.crt
