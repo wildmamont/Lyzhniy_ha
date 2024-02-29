@@ -56,11 +56,11 @@
     name: "28_3c01b5568add_temperature"
     unit_of_measurement: "°C"
     value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_3c01b5563c0e_temperature.json"
-    name: "28_3c01b5563c0e_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b5563c0e_temperature.json"
+#    name: "28_3c01b5563c0e_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
   - platform: file
     file_path: "/config/sensors/28_3c01b556ecd0_temperature.json"
     name: "28_3c01b556ecd0_temperature"
@@ -116,6 +116,22 @@
     name: "sht30_14e21d_temperature"
     unit_of_measurement: "°C"
     value_template: '{{ value_json.state }}'
+#Garage
+  - platform: file
+    file_path: "/config/sensors/garage_temperature.json"
+    name: "Garage_temperature"
+    unit_of_measurement: "°C"
+    value_template: '{{ value_json.state }}'
+  - platform: file
+    file_path: "/config/sensors/garage_humidity.json"
+    name: "Garage_humidity"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.state }}'
+  - platform: file
+    file_path: "/config/sensors/garage_dewpoint.json"
+    name: "Garage_DewPoint"
+    unit_of_measurement: "°C"
+    value_template: '{{ value_json.state }}'
 
 
 ###
@@ -126,28 +142,44 @@
     unit_of_measurement: "°C"
     value_template: '{{ value_json.state }}'
 
+  - platform: file
+    file_path: "/config/sensors/tasmota_148a24_temperature.json"
+    name: "tasmota_148a24_temperature"
+    unit_of_measurement: "°C"
+    value_template: '{{ value_json.state }}'
+  - platform: file
+    file_path: "/config/sensors/tasmota_148a24_dewpoint.json"
+    name: "tasmota_148a24_dewpoint"
+    unit_of_measurement: "°C"
+    value_template: '{{ value_json.state }}'
+  - platform: file
+    file_path: "/config/sensors/tasmota_148a24_humidity.json"
+    name: "tasmota_148a24_humidity"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.state }}'
+
 
 # hilink
-  - platform: file
-    file_path: "/config/hilink/month_statistics.json"
-    name: "CurrentMonthDownload"
-    unit_of_measurement: "bytes"
-    value_template: '{{ value_json.response.CurrentMonthDownload }}'
-  - platform: file
-    file_path: "/config/hilink/month_statistics.json"
-    name: "CurrentMonthUpload"
-    unit_of_measurement: "bytes"
-    value_template: '{{ value_json.response.CurrentMonthUpload }}'
-  - platform: file
-    file_path: "/config/hilink/month_statistics.json"
-    name: "MonthDuration"
-    unit_of_measurement: "sec"
-    value_template: '{{ value_json.response.MonthDuration }}'
-  - platform: file
-    file_path: "/config/hilink/month_statistics.json"
-    name: "MonthLastClearTime"
-    unit_of_measurement: "date"
-    value_template: '{{ value_json.response.MonthLastClearTime }}'
+#  - platform: file
+#    file_path: "/config/hilink/month_statistics.json"
+#    name: "CurrentMonthDownload"
+#    unit_of_measurement: "bytes"
+#    value_template: '{{ value_json.response.CurrentMonthDownload }}'
+#  - platform: file
+#    file_path: "/config/hilink/month_statistics.json"
+#    name: "CurrentMonthUpload"
+#    unit_of_measurement: "bytes"
+#    value_template: '{{ value_json.response.CurrentMonthUpload }}'
+#  - platform: file
+#    file_path: "/config/hilink/month_statistics.json"
+#    name: "MonthDuration"
+#    unit_of_measurement: "sec"
+#    value_template: '{{ value_json.response.MonthDuration }}'
+#  - platform: file
+#    file_path: "/config/hilink/month_statistics.json"
+#    name: "MonthLastClearTime"
+#    unit_of_measurement: "date"
+#    value_template: '{{ value_json.response.MonthLastClearTime }}'
 
 
 # Minimal configuration of the standard time and date sensor

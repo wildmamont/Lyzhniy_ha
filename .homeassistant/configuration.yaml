@@ -43,12 +43,19 @@ telegram_bot:
       - !secret telegram_bot_allowed_chat_id7
 
 camera:
-  - platform: mjpeg
-    name: Boavision_snapshot
-    mjpeg_url: http://192.168.29.42:8123/local/bao_snapshot.jpg
-  - platform: mjpeg
-    name: VStarcam_snapshot
-    mjpeg_url: http://admin:888888@192.168.20.33:81/snapshot.cgi
+# mjpeg unsupported here
+#  - platform: mjpeg
+#    name: Boavision_snapshot
+#    mjpeg_url: http://192.168.29.42:8123/local/bao_snapshot.jpg
+#  - platform: mjpeg
+#    name: VStarcam_snapshot
+#    mjpeg_url: http://admin:888888@192.168.20.33:81/snapshot.cgi
+#  - platform: mjpeg
+#    name: hikvision_nvr_2
+#    mjpeg_url: http://192.168.17.92/onvif/snapshot/201
+#    username: homeassistant
+#    password: homeassistant
+
 
 #camera:
 #  - platform: generic

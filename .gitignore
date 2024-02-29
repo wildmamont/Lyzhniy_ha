@@ -6,9 +6,12 @@
 .storage
 .cloud
 .google.token
-# Без Картинок
-*.jpg
-bao_snapshot.jpg
+# No images
+www/*.jpg
+#bao_snapshot.jpg
+## Video
+www/*mp4
+
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
@@ -26,3 +29,4 @@ mosquitto.log
 
 home-assistant.key
 home-assistant.crt
+

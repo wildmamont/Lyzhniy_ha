@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo Pull update
-PULL=`docker pull homeassistant/raspberrypi3-homeassistant:stable`
+#PULL=`docker pull homeassistant/raspberrypi3-homeassistant:stable`
 #PULL=`docker pull homeassistant/raspberrypi3-homeassistant:2021.6.6`
-
+docker pull homeassistant/raspberrypi3-homeassistant:stable
 RETURN=$?
 
 if [ "$RETURN" -eq "0" ] ; then 

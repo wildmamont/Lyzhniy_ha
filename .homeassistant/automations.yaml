@@ -231,6 +231,12 @@
       username: homeassistant
       password: homeassistant17
       target: '{{ trigger.event.data.chat_id }}'
+  - service: telegram_bot.send_photo
+    data:
+      url: http://192.168.17.92/onvif/snapshot/401
+      username: homeassistant
+      password: homeassistant17
+      target: '{{ trigger.event.data.chat_id }}'
   mode: queued
   max: 10
 - id: '1610368227923'
