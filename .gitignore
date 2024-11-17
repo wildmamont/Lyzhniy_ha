@@ -1,4 +1,4 @@
-!*.yaml
+#!*.yaml
 !.gitignore
 !*.md
 
@@ -10,7 +10,7 @@
 www/*.jpg
 #bao_snapshot.jpg
 ## Video
-www/*mp4
+www/*.mp4
 
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.

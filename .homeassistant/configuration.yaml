@@ -165,4 +165,5 @@ shell_command:
   get_temperature_vichnya: /config/scripts/vishnya.sh
   get_temperature_fomino: /config/scripts/fomino.sh
   get_boa_snapshot: /config/scripts/get_boa_snapshot.sh
+  get_vstarcam_snapshot: /config/scripts/get_vstarcam_snapshot.sh  
 #  get_boa_snapshot: curl 'http://admin:admin@192.168.20.110/jpgimage/1/image.jpg' -o /config/www/bao_snapshot.jpg 

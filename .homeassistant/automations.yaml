@@ -165,7 +165,7 @@
         }}, втором этаже: {{ states(''sensor.28_3c01b5560bc5_temperature'') }}, Температура
         на улице: {{ states(''sensor.28_3c01b556dd86_temperature'') }}, Температура
         на под крышей: {{ states(''sensor.28_3c01b556abd9_temperature'') }}.  Дата
-        обновления: {{ as_timestamp(states.sensor[''28_3c01b5562324_temperature''].last_updated)|timestamp_local
+        обновления: {{ as_timestamp(states.sensor[''28_3c01b556abd9_temperature''].last_updated)|timestamp_local
         }}'
       title: ' Автоматика Вишневой '
   mode: queued
