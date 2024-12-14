@@ -156,10 +156,10 @@ lovelace:
   - url: /module/fold-entity-row.js
     type: module
 
-panel_iframe:
-  grafana:
-    title: "Grafana"
-    url: "http://192.168.29.42:3000/goto/eQU-rpRgz?orgId=1"
+#panel_iframe:
+#  grafana:
+#    title: "Grafana"
+#    url: "http://192.168.29.42:3000/goto/eQU-rpRgz?orgId=1"
 
 shell_command:
   get_temperature_vichnya: /config/scripts/vishnya.sh

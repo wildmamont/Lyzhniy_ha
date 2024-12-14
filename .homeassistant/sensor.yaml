@@ -25,145 +25,145 @@
 #    value_template: "{{ value_json.SI7021.Humidity }}"
 
 ## Vishnya
-  - platform: file
-    file_path: "/config/sensors/28_3c01b5560bc5_temperature.json"
-    name: "28_3c01b5560bc5_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_3c01b55646ad_temperature.json"
-    name: "28_3c01b55646ad_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-
-  - platform: file
-    file_path: "/config/sensors/28_3c01b556dd86_temperature.json"
-    name: "28_3c01b556dd86_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_3c01b5562324_temperature.json"
-    name: "28_3c01b5562324_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_3c01b556abd9_temperature.json"
-    name: "28_3c01b556abd9_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_3c01b5568add_temperature.json"
-    name: "28_3c01b5568add_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b5560bc5_temperature.json"
+#    name: "28_3c01b5560bc5_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b55646ad_temperature.json"
+#    name: "28_3c01b55646ad_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b556dd86_temperature.json"
+#    name: "28_3c01b556dd86_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b5562324_temperature.json"
+#    name: "28_3c01b5562324_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b556abd9_temperature.json"
+#    name: "28_3c01b556abd9_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b5568add_temperature.json"
+#    name: "28_3c01b5568add_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
 #  - platform: file
 #    file_path: "/config/sensors/28_3c01b5563c0e_temperature.json"
 #    name: "28_3c01b5563c0e_temperature"
 #    unit_of_measurement: "°C"
 #    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_3c01b556ecd0_temperature.json"
-    name: "28_3c01b556ecd0_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b556ecd0_temperature.json"
+#    name: "28_3c01b556ecd0_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
 
 
 
-  - platform: file
-    file_path: "/config/sensors/28_e0505c050000_temperature.json"
-    name: "28_e0505c050000_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_3c01b55640a2_temperature.json"
-    name: "28_3c01b55640a2_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/28_eb675a050000_temperature.json"
-    name: "28_eb675a050000_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-
-  - platform: file
-    file_path: "/config/sensors/sonoff_th1_mqtt_temperature.json"
-    name: "sonoff_th1_mqtt_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/sonoff_th2_mqtt_temperature.json"
-    name: "sonoff_th2_mqtt_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/sonoff_th1_mqtt_humidity.json"
-    name: "sonoff_th1_mqtt_humidity"
-    unit_of_measurement: "%"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/sonoff_th2_mqtt_humidity.json"
-    name: "sonoff_th2_mqtt_humidity"
-    unit_of_measurement: "%"
-    value_template: '{{ value_json.state }}'
-
-  - platform: file
-    file_path: "/config/sensors/sht30_14e21d_humidity.json"
-    name: "sht30_14e21d_humidity"
-    unit_of_measurement: "%"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/sht30_14e21d_temperature.json"
-    name: "sht30_14e21d_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_e0505c050000_temperature.json"
+#    name: "28_e0505c050000_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_3c01b55640a2_temperature.json"
+#    name: "28_3c01b55640a2_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/28_eb675a050000_temperature.json"
+#    name: "28_eb675a050000_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#
+#  - platform: file
+#    file_path: "/config/sensors/sonoff_th1_mqtt_temperature.json"
+#    name: "sonoff_th1_mqtt_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/sonoff_th2_mqtt_temperature.json"
+#    name: "sonoff_th2_mqtt_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/sonoff_th1_mqtt_humidity.json"
+#    name: "sonoff_th1_mqtt_humidity"
+#    unit_of_measurement: "%"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/sonoff_th2_mqtt_humidity.json"
+#    name: "sonoff_th2_mqtt_humidity"
+#    unit_of_measurement: "%"
+#    value_template: '{{ value_json.state }}'
+#
+#  - platform: file
+#    file_path: "/config/sensors/sht30_14e21d_humidity.json"
+#    name: "sht30_14e21d_humidity"
+#    unit_of_measurement: "%"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/sht30_14e21d_temperature.json"
+#    name: "sht30_14e21d_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
 #Garage
-  - platform: file
-    file_path: "/config/sensors/garage_temperature.json"
-    name: "Garage_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/garage_humidity.json"
-    name: "Garage_humidity"
-    unit_of_measurement: "%"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/garage_dewpoint.json"
-    name: "Garage_DewPoint"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/garage_temperature.json"
+#    name: "Garage_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/garage_humidity.json"
+#    name: "Garage_humidity"
+#    unit_of_measurement: "%"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/garage_dewpoint.json"
+#    name: "Garage_DewPoint"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
 
 
 ###
 ## Fomino
-  - platform: file
-    file_path: "/config/sensors/28_0000055a67eb_temperature.json"
-    name: "28_0000055a67eb_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-
-  - platform: file
-    file_path: "/config/sensors/tasmota_148a24_temperature.json"
-    name: "tasmota_148a24_temperature"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/tasmota_148a24_dewpoint.json"
-    name: "tasmota_148a24_dewpoint"
-    unit_of_measurement: "°C"
-    value_template: '{{ value_json.state }}'
-  - platform: file
-    file_path: "/config/sensors/tasmota_148a24_humidity.json"
-    name: "tasmota_148a24_humidity"
-    unit_of_measurement: "%"
-    value_template: '{{ value_json.state }}'
-
-
-# hilink
 #  - platform: file
-#    file_path: "/config/hilink/month_statistics.json"
-#    name: "CurrentMonthDownload"
-#    unit_of_measurement: "bytes"
+#    file_path: "/config/sensors/28_0000055a67eb_temperature.json"
+#    name: "28_0000055a67eb_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#
+#  - platform: file
+#    file_path: "/config/sensors/tasmota_148a24_temperature.json"
+#    name: "tasmota_148a24_temperature"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/tasmota_148a24_dewpoint.json"
+#    name: "tasmota_148a24_dewpoint"
+#    unit_of_measurement: "°C"
+#    value_template: '{{ value_json.state }}'
+#  - platform: file
+#    file_path: "/config/sensors/tasmota_148a24_humidity.json"
+#    name: "tasmota_148a24_humidity"
+#    unit_of_measurement: "%"
+#    value_template: '{{ value_json.state }}'
+#
+#
+## hilink
+##  - platform: file
+##    file_path: "/config/hilink/month_statistics.json"
+##    name: "CurrentMonthDownload"
+##    unit_of_measurement: "bytes"
 #    value_template: '{{ value_json.response.CurrentMonthDownload }}'
 #  - platform: file
 #    file_path: "/config/hilink/month_statistics.json"
